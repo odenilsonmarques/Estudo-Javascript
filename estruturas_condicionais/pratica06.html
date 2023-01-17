@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descobrindo o maior numero informado</title>
+
+    <style>
+        fieldset{
+            height:250px;
+        }
+        input{
+            margin-top: 10px;
+        }
+        #resultado{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Descobrindo o maior número informado</legend>
+
+        <input type="number" id="primeiroNumero" placeholder="Digite o primeiro número"><br/><br/>
+        <input type="number" id="segundoNumero"  placeholder="Digite o segundo número"><br/><br/>
+        <input type="number" id="terceiroNumero" placeholder="Digite o terceiro número"><br/><br/>
+
+        <input type="button" value="Executar" onclick="descobrindoMaiorNumero()">
+
+        <div id="resultado"></div>
+    </fieldset>
+
+    <script>
+        function descobrindoMaiorNumero(){
+            var num01 = Number(document.getElementById('primeiroNumero').value)
+            var num02 = Number(document.getElementById('segundoNumero').value)
+            var num03 = Number(document.getElementById('terceiroNumero').value)
+            var result = document.getElementById('resultado')
+
+            result.innerHTML = `os numero digitados foram: <strong>${num01} - ${num02} - ${num03}, </strong> <br>`
+
+            if(num01 > num02 && num01 > num03){
+                result.innerHTML += `o maior número é: <strong>${num01}</strong>`
+            }else if(num02 > num03){
+                result.innerHTML += `o maior número é: <strong>${num02}</strong>`
+            }else{
+                result.innerHTML += `o maior número é: <strong>${num03}</strong>`
+            }
+
+        }
+    </script>
+</body>
+</html>

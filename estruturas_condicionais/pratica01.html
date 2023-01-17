@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula velocidade</title>
+    <style>
+        fieldset{
+            height:120px;
+        }
+        label{
+            margin-top:10px;
+        }
+        #resultado{
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Calculo de velocidade</legend>
+        <label for="txtVelocidade">Informe a velocidade</label><br>
+        <input type="number" id="txtVelocidade">
+        <input type="button" value="Calcular" onclick="calculaVelocidade()">
+
+        <div id="resultado"></div>
+    </fieldset>
+
+    <script>
+        function calculaVelocidade(){
+            var vel = Number(document.getElementById('txtVelocidade').value)
+            var result = document.getElementById('resultado')
+
+            result.innerHTML = `a sua velocidade foi de <strong>${vel} km/h </strong> <br>`
+
+            if(vel > 100){
+                result.innerHTML += 'Você foi <strong>Multado</strong> por excesso de velocidade !<br>'
+            }
+
+            result.innerHTML += 'Dirija sempre com o sinto de segurança :)'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de numeros positivos</title>
+
+    <style>
+        fieldset{
+            height: 200px;
+            margin-top: 30px;
+        }
+        input{
+            margin-top:15px;
+        }
+        #resultado{
+            margin-top:15px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Contador de numeros positivos</legend>
+        Inicio: <input type="number" id="numeroInicial" placeholder="Digite o números inicial"><br />
+        Fim: <input type="number" id="numeroFinal" placeholder="Digite o números final"><br />
+        Passo: <input type="number" id="numeroDePassos"  placeholder="Digite o número de passos">
+        <input type="button" value="Iniciar contagem" onclick="contadorDeNumeros()">
+
+        <div id="resultado">Preparando contagem:</div>
+    </fieldset>
+
+    <script>
+        function contadorDeNumeros(){
+            let numInicial = Number(document.getElementById('numeroInicial').value)
+            // console.log(numInicial)
+            let numFinal = Number(document.getElementById('numeroFinal').value)
+            // console.log(numFinal)
+            let numPassos = Number(document.getElementById('numeroDePassos').value)
+            // console.log(numPassos)
+            let result = document.getElementById('resultado')
+
+            if(numInicial == 0 || numFinal == 0 || numPassos == 0){
+                alert('Erro ! por favor preencha os campos')
+            }
+            else{
+                
+                if(numInicial < numFinal){
+                    result.innerHTML = 'Contando:'
+                    for(var contador = numInicial; contador <= numFinal; contador += numPassos) {
+                    // console.log(`sequencia ${contador}`)
+                    result.innerHTML += `${contador} \u{1f449}`;
+                    }   
+
+                }else{
+                    alert('O valor inicial deve ser menor do que o valor final')
+                }
+               
+            }
+
+        }
+    </script>
+</body>
+</html>

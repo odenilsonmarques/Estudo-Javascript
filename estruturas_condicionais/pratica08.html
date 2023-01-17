@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financiamento</title>
+
+    <style>
+        fieldset{
+            height: 170px;
+        }
+        input{
+            margin-top: 10px;
+        }
+        #resultado{
+            margin-top: 10px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Calculo financiamento</legend>
+
+        <input type="number" id="valorDoSalario" placeholder="Digite o valor do salário">
+        <input type="number" id="valorDoFinanciamento"  placeholder="Digite o valor do financiamento">
+        <input type="button" value="Calcular" onclick="calcularValorDoFinanciamento()">
+
+        <div id="resultado"></div>
+    </fieldset>
+
+
+    <script>
+        function calcularValorDoFinanciamento(){
+
+            var vl_salario = Number(document.getElementById('valorDoSalario').value)
+            console.log(vl_salario)
+            var vl_financiamento = Number(document.getElementById('valorDoFinanciamento').value)
+            console.log(vl_financiamento)
+            var result = document.getElementById('resultado')
+
+            result.innerHTML = `<strong>Obrigado por nos consultar</strong><br>`
+
+            if(vl_financiamento <= vl_salario * 5 ){
+                result.innerHTML += `O valor do seu salário é de: <strong>${vl_salario}</strong><br>`
+                result.innerHTML += `O valor do financiamento solicitado foi de: <strong>${vl_financiamento}</strong><br>`
+                result.innerHTML += `<strong>Financiamento concedido !</strong><br>`
+                result.style.backgroundColor = '#008000'
+            }else{
+                result.innerHTML += `O valor seu salário é de: <strong>${vl_salario}</strong><br>`
+                result.innerHTML += `O valor do financiamento solicitado foi de: <strong>${vl_financiamento}</strong><br>`
+                result.innerHTML += `<strong>Financiamento negado !</strong><br>`
+                result.style.backgroundColor = '#DC143C'
+            }
+        }
+    </script>
+</body>
+</html>

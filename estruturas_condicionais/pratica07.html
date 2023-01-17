@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media aritmética</title>
+
+    <style>
+        fieldset{
+            height:170px;
+        }
+        input{
+            margin-top: 15px;
+        }
+        #resultado {
+            margin-top: 15px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Cálculo da média aritmética</legend>
+
+        <input type="number" id="primeiraNota" placeholder="Digite a primeira nota">
+        <input type="number" id="segundaNota"  placeholder="Digite a segunda nota">
+        <input type="number" id="terceiraNota" placeholder="Digite a terceira nota">
+        <input type="number" id="quartaNota"   placeholder="Digite a quarta nota">
+        <input type="button" value="Calcular" onclick="calcularMediaAritmetica()">
+
+        <div id="resultado"></div>
+    </fieldset>
+
+    <script>
+        function calcularMediaAritmetica(){
+            var nt_01 = Number(document.getElementById('primeiraNota').value)
+            var nt_02 = Number(document.getElementById('segundaNota').value)
+            var nt_03 = Number(document.getElementById('terceiraNota').value)
+            var nt_04 = Number(document.getElementById('quartaNota').value)
+
+            var mediaAritmetica = Number.parseFloat(nt_01 + nt_02 + nt_03 + nt_04)/4
+
+            var result = document.getElementById('resultado')
+
+            result.innerHTML = `<strong>Bem -vindo ao calculo da média aritmética</strong><br>`
+
+            if(mediaAritmetica >= 7){
+                result.innerHTML += `Sua notas foram : <strong>${nt_01} - ${nt_02} - ${nt_03} - ${nt_04}</strong><br>`
+                result.innerHTML += `Sua média foi: <strong>${mediaAritmetica}</strong><br>`
+                result.innerHTML += `Situação: <strong> Aprovado !</strong><br>`
+                result.style.backgroundColor = '#ccc'
+            }else{
+                result.innerHTML += `Sua notas foram : <strong>${nt_01} - ${nt_02} - ${nt_03} - ${nt_04}</strong><br>`
+                result.innerHTML += `Sua média foi: <strong>${mediaAritmetica}</strong><br>`
+                result.innerHTML += `Situação: <strong> Reprovado ! </strong><br>`
+                result.style.backgroundColor = '#ccc'
+            }
+        }
+    </script>
+    
+</body>
+</html>
+

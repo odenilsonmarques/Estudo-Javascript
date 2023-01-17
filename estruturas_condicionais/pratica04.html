@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicacão de desconto</title>
+
+    <style>
+        fieldset{
+            height:120px;
+        }
+        input{
+            margin-top: 10px;
+        }
+        #resultado{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Aplicador de desconto</legend>
+        <input type="text" id="sexo" placeholder="Digite o sexo">
+
+        <input type="number" id="idade" placeholder="Digite a idade">
+        <input type="button" value="Aplicar Desconto" onclick="aplicaDesconto()">
+
+        <div id="resultado"></div>
+    </fieldset>
+    
+    <script>
+        function aplicaDesconto(){
+            var sx = (document.getElementById('sexo').value);
+            var id = Number(document.getElementById('idade').value)
+            var result = document.getElementById('resultado')
+          
+            if(sx === 'Feminino'){
+                result.innerHTML = `você ganhou um desconto de <strong> 50% </strong>`
+            }
+            else if(sx === 'Masculino' && id >= 18){
+                result.innerHTML = `você ganhou um desconto de <strong> 40% </strong>`
+            }
+            else{
+                result.innerHTML = `você ganhou um desconto de <strong> 45% </strong>`
+            }
+        }
+    </script>
+</body>
+</html>

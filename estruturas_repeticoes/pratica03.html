@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisoree de um numero inteiro</title>
+
+    <style>
+        fieldset{
+            margin-top: 10px;
+            height: 250px;
+        }
+        input{
+            margin-top: 10px;
+        }
+        #divisores{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <fieldset>
+        <legend>Divisoree de um numero inteiro</legend>
+
+        <input type="number" name="" id="numero" placeholder="Digite um numero">
+        <input type="button" value="Gerar divisores" onclick="gerarDivisores()"><br>
+
+        <select name="" id="divisores" size="10">
+            <option value="">Os divisores sao</option>
+        </select>
+    </fieldset>
+
+    <script>
+        function gerarDivisores(){
+            let num = Number(document.getElementById('numero').value)
+            let dv = document.getElementById('divisores')
+            dv.innerHTML = ''
+
+            if(num == 0){
+                alert('Por favor, digite um número')
+            }
+            else{
+                for(let n = 1; n <= num; n++) {
+                    if(num % n == 0) {
+                        let item = document.createElement('option')
+                        item.text = `${num} / ${n}`
+                        dv.appendChild(item)
+                    }
+                }
+            } 
+        }
+    </script>
+    
+</body>
+</html>

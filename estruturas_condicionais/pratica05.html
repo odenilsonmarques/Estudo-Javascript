@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de numero</title>
+
+    <style>
+        fieldset{
+            height: 140px;
+        }
+        input{
+            margin-top: 15px;
+        }
+        #resultado{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Tipo de numero</legend>
+            <input type="text" id="numero" placeholder="Digite o numero">
+            <input type="button" value="executar" onclick="tipoDeNumero()">
+
+            <div id="resultado"></div>
+    </fieldset>
+
+    <script>
+        function tipoDeNumero() {
+            var num = Number(document.getElementById('numero').value)
+            var result = document.getElementById('resultado')
+
+            if(num > 0){
+                result.innerHTML = `você digitou o número <strong>${num}</strong>, ele é <strong>Positivo</strong>`
+            }
+            else if(num < 0){
+                result.innerHTML = `você digitou o número <strong>${num}</strong>, ele é <strong>Negativo</strong>`
+            }
+            else{
+                result.innerHTML = `você digitou o número <strong>${num}</strong>, ele é <strong>Nulo</strong>`
+            }
+        }
+    </script>
+    
+</body>
+</html>

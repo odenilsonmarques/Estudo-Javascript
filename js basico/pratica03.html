@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- código para estilização da página -->
+    <style>
+        body{
+            background-color:rgb(123, 112, 226);
+            color:#fff;
+        }
+        h1{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo !</h1>
+    <!-- Código javascript -->
+    <!-- este mesmo trecho de código pode ser escrito sem o window, devido este ser o elemento raiz do documento -->
+    <script>
+        var n1 = Number(window.prompt('Digite um número'))
+        var n2 = Number(window.prompt('Digite outro numero'))
+
+        var soma = n1 + n2
+
+        // Usando template string para exibir o resultado
+        window.alert(`O resultado da soma é ${soma}`)
+    </script>
+</body>
+</html>

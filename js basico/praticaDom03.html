@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Calculadora</legend>
+        <input type="number" name="" id="n1"> +
+        <input type="number" name="" id="n2"><br><br>
+        <input type="button" value="Somar" onclick="calcular()">
+    </fieldset>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcular() {
+            var n_1 = Number(document.getElementById('n1').value)
+            var n_2 = Number(document.getElementById('n2').value)
+            var res = document.getElementById('resultado')
+
+            var result = n_1 + n_2
+
+            res.innerText = `O resultado da soma é ${result}`
+            res.style.marginTop = '10px'
+        }
+    </script>
+</body>
+</html>

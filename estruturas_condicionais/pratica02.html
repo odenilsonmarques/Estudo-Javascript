@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descobrindo módulo de um numero</title>
+
+    <style>
+        fieldset{
+            height: 150px;
+        }
+        input{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Descobrindo módulo de um numero</legend>
+        
+        <input type="number" id="numero" name="numero"><br />
+        <input type="button" value="Executar" onclick="descobrindoModuloDeUmNumero()">
+
+        <div id="resultado"></div>
+    </fieldset>
+    
+    <script>
+        function descobrindoModuloDeUmNumero(){
+            var num = Number(document.getElementById("numero").value)
+            var result = document.getElementById("resultado")
+
+            result.innerHTML = `O número digitado foi <strong>${num}</strong> <br>`
+
+            if(num < 0){
+                // poderia usar outra variavel para armazenar o resultado, não teria nenhum problema seria apenas uma forma difererente.
+                num = num * (-1)
+                result.innerHTML += `O módulo do numero informado é ${num}`
+            }
+        }
+    </script>
+</body>
+</html>

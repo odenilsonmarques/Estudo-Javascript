@@ -1,0 +1,35 @@
+body
+{
+    background:rgb(114, 114, 243);
+}
+h1
+{
+    text-align: center;
+    color: #ffffff;
+}
+
+section
+{
+    
+    width: 500px;
+    margin:auto;
+    background:#ffffff;
+    padding: 20px;
+}
+
+
+footer p
+{
+    text-align: center;
+    color:#ffffff;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 168px;
+}
+
+input#anoNascimento{
+    width: 250px;
+}

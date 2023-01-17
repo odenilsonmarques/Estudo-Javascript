@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica Dom 02</title>
+    <style>
+        #texto{
+            width: 250px;
+            height: 200px;
+            border: 1px solid black;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 200px;
+
+        }
+
+        #texto2{
+            width: 250px;
+            height: 200px;
+            border: 1px solid red;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 200px;
+
+        }
+    </style>
+</head>
+<body>
+    <!---------------------------EXEMPLO 01------------------------------->
+    <!------------ALTERANDO O TEXTO DA DIV AO CLICAR NA MESMA------------->
+    <div id="texto" onclick="alteraTextoAoClicar()">
+        Eu sou o texto antes do clique
+    </div>
+    <script>
+        function alteraTextoAoClicar(){
+            var txt = document.getElementById('texto')
+            txt.innerText = 'Hello,  I am text next clic'
+            txt.style.color = 'green'
+        }
+    </script>
+
+
+    <!---------------------------EXEMPLO 02------------------------------->
+    <!---ALTERANDO A COR E O TEXTO DA DIV AO PASSAR O MOUSE POR CIMA------>
+    <div id="texto2" onmouseenter="entrarNaDiv()" onmouseout="sairDaDiv()">
+        Passe o mouse aqui
+    </div>
+
+    <script>
+        function entrarNaDiv() {
+            var txt2 = document.getElementById('texto2');
+            txt2.innerText = 'voce entrou na div'
+            txt2.style.color = 'red'
+            txt2.style.background = 'black'
+        }
+
+        function sairDaDiv(){
+            var txt2 = document.getElementById('texto2');7
+            txt2.innerText = 'Passe o mouse aqui'
+            txt2.style.color = 'black'
+            txt2.style.background = 'white'
+            
+        }
+    </script>
+
+
+    
+</body>
+</html>

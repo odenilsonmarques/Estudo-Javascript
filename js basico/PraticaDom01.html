@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira aula de DOM</title>
+</head>
+<body>
+
+    <h1>Módulo Dom</h1><hr>
+
+
+    <div id="msg">Recursos do Dom</div><hr>
+
+    <p>Bem - vindo ao módulo dom</p>
+
+    <p>Para ter o Dom tem que estudar</p><hr>
+
+    <div id="frase">Muito ter conhecido o DOM</div><hr>
+
+    <!-- Inserindo um texto via javascript usando DOM -->
+    <script>
+        
+        var texto = window.document.write("Hello, eu sou um texto declarado via javascrip, isso só é possivel graças ao DOM")
+
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'red'
+        d.style.background= 'yellow'
+
+        var p0 = window.document.getElementsByTagName('p')[0]
+        p0.style.color = 'yellow'
+        p0.style.background = 'green'
+
+        var p1 = window.document.getElementsByTagName('p')[1]
+        p1.style.color = 'blue'
+        p1.style.background = 'red'
+
+        var f = window.document.getElementById('frase')
+        f.style.color = 'green'
+        f.style.background = 'pink'
+    </script>
+
+</body>
+</html>
