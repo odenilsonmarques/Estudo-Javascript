@@ -1,4 +1,4 @@
-//buscando a posição da chave de um determinado valor.Quano um valor não é encontrado é atribuido a ele o valor -1
+//buscando a posição da chave de um determinado valor.Quando um valor não é encontrado é atribuido a ele o valor -1
 
 let num = [2,4,5,3]
 
