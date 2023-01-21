@@ -1,0 +1,16 @@
+fieldset{
+    height: 220px;
+}
+
+input{
+    margin-top:15px;
+}
+
+input#numero{
+    width: 250px;
+}
+
+select{
+    width: 150px;
+    margin-top: 10px;
+}
