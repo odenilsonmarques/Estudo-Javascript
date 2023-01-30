@@ -1,0 +1,11 @@
+fieldset{
+    height: 300px;
+}
+input{
+    margin-top:10px;
+}
+#resultado{
+    margin-top:10px;
+    background-color:#fff;
+    padding-top:10px;
+}
