@@ -1,0 +1,16 @@
+fieldset{
+    height: 200px;
+}
+input{
+    margin-top:15px;
+}
+    
+#divisores{
+    margin-top:15px;
+    width: 180px;
+}
+
+#resultado{
+    margin-top:10px;
+    padding:10px;
+}
