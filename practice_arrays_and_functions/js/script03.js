@@ -11,7 +11,7 @@ function exibeDivisoresDeUmNumeroInteiro(){
                 valores.push(i)
             }    
         }
-        console.log(`o vetor valores possui ${valores.length} divisores, são eles ${valores.sort()}`)
+        // console.log(`o vetor valores possui ${valores.length} divisores, são eles ${valores.sort()}`)
         result.innerHTML = ''
         result.innerHTML += `o vetor valores possui <strong>${valores.length}</strong> divisores<br><br>`
         result.innerHTML += `são eles <strong>${valores.sort()}</strong>`
