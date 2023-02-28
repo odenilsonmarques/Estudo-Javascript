@@ -13,5 +13,22 @@ console.log(`O valor do vetor na posição zero é: ${num[0]}`)
 // /exibindo os valores do vetor em ordem
 console.log(num.sort())
 
-//adicionando um valor no final do vetor. Lembrar que a posição dessa função influência no resultado
-// num.push(1)
+//adicionando um valor no final do vetor. 
+num.push(10)
+console.log(num)
+
+//adicionando um valor no inicio do vetor. 
+num.unshift(0)
+console.log(num)
+
+//removendo o ultimo valor do array ou vetor. 
+num.pop()
+console.log(num)
+
+//removendo o primeiro valor do array ou vetor. 
+num.shift()
+console.log(num)
+
+//invetendo a ordem do array
+num.reverse()
+console.log(num)
