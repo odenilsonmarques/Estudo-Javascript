@@ -32,3 +32,9 @@ console.log(num)
 //invetendo a ordem do array
 num.reverse()
 console.log(num)
+
+// exibindo os valores conforme as posições passadas
+console.log(num.slice(1, 3))
+
+//convertendo um array para string
+console.log(num.toString())
