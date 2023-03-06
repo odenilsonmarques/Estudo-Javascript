@@ -1,0 +1,19 @@
+var carros = [
+
+    {name: 'celta', year: 2000},
+    {name: 'cobalt', year: 2023},
+    {name: 'jeep mine', year: 2022},
+    {name: 'sandero', year: 2021},
+    {name: 'fusca', year: 2019},
+];
+
+for(let index = 0; index < carros.length; index++){
+    console.log(`carro:${carros[index].name} - ano ${carros[index].year}`);
+}
+console.log('<br />')
+
+//o mesmo exemlo usuando o foreach. No lugar o parametro element poderia ser qlq nome
+carros.forEach(function(element){
+    console.log(`Carro: ${element.name} - ano ${element.year}`);
+
+});
