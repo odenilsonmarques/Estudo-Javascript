@@ -1,0 +1,1 @@
+console.log(document.querySelector('div').innerHTML = '<strong>EU spu uma div</strong>')
