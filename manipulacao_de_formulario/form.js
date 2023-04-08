@@ -12,6 +12,23 @@ function onSubmit(){
     var password = document.getElementsByName('password')[0].value
     document.getElementsByClassName('senha')[0].innerText = 'sua senha é '+password
 
+
+    //capturando o valor do tipo checkbox, nesse caso use-se o checked, também optei por usar o id
+    //se não estiver marcado tras false, caso contrario tras true
+    console.log(document.getElementById('terms').checked)
+
+    //capturando o valor do selector
+    var valor = document.getElementById('state').value
+    if(valor == ''){
+        alert('escolha um estado')
+    }
+
+    //capturando o valor do radio
+    console.log(document.querySelector('input[name="sexo"]:checked').value)
+
+    //capturando o valor do texarea
+    console.log(document.getElementsByClassName('desc')[0].value)
+
     
 
     //esse return tem ligação com return que foi definido no form na função onSubmit, porem exitem outras formas
