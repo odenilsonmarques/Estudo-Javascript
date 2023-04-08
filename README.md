@@ -21,9 +21,6 @@
 
 + curiosidade -> nodes js é uma maquina que roda javascript fora do navegador ou seja roda do lado servidor
 
-+ curiosidade -> para usar o node no vscode basta digitar no terminal do vscode a palavra node. Para fechar o terminal do node usar .exit(ponto exit)
++ curiosidade -> para usar o node no vscode basta digitar no terminal do vscode a palavra node. Para fechar o terminal do node usar .exit(ponto exit) para rodar o node deve-se instalar o node.js exec 
 
-+ curiosidade -> nessa versao o js tem o recurso de template string (crase), use este recurso para con sem usar aspas.
-
-
-iniciar da aula estrutura de repetição parte 01
++ curiosidade -> nessa versao o js tem o recurso de template string (crase).
